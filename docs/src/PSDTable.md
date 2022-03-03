@@ -12,18 +12,18 @@ You can find a pre-made table model on Typhon at `/data/typhon1/phajy/gx339-4/pw
 
 ### Change the PSD format so it can be read into XSPEC
 
-See instructions on using a (propagating fluctuations model)[https://heasarc.gsfc.nasa.gov/xanadu/xspec/models/propfluc.html] in XSPEC. Use `flx2xsp` to convert a PSD to a "pi" file and response. See Appendix A of Ingram & Done (2012) for how to do this.
+See instructions on using a [propagating fluctuations model](https://heasarc.gsfc.nasa.gov/xanadu/xspec/models/propfluc.html) in XSPEC. Use `flx2xsp` to convert a PSD to a "pi" file and response. See Appendix A of Ingram & Done (2012) for how to do this.
 
 As a test case let's use the power spectrum `xti3558010202_700-1500eV_ps_logrb.fits`.
 
 I've created a text file from this called `my_psd.csv` (you can find this file in the `test` folder) with the following columns.
 
-$f − df$, $f + df$, $2 P df$, $2 dP df$.
+f − df, f + df, 2Pdf, 2dPdf.
 
-- $f$ is the frequency at the bin centre.
-- $df$ is related to the bin width, which spans $f \pm df$ so the bin width is $2df$.
-- $2 P df$ is the power, $P$, multiplied by the bin width $2 df$.
-- $2 dP df$ is the error on the power, $dP$, multiplied by the bin widht $2 df$.
+- f is the frequency at the bin centre.
+- df is related to the bin width, which spans f ± df so the bin width is 2df.
+- 2Pdf is the power, P, multiplied by the total bin width 2df.
+- 2dPdf is the error on the power, dP, multiplied by the total bin width 2df.
 
 Note that columns should be separated by spaces not commas.
 
