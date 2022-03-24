@@ -6,7 +6,9 @@ The code `PSDTable.py` can be used to assemble an XSPEC table model of Power Spe
 
 I will provide separate documentation on how to run this later.
 
-You can find a pre-made table model on Typhon at `/data/typhon1/phajy/gx339-4/pwd.mod`.
+You can find two pre-made table models on Typhon:
+- `/data/typhon1/phajy/gx339-4/PSDsoft.mod` for the soft band (0.3-0.7 keV)
+- `/data/typhon1/phajy/gx339-4/PSDhard.mod` for the hard band (0.7-1.5 keV)
 
 ## How to use the PSD table model in XSPEC
 

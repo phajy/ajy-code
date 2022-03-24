@@ -15,8 +15,13 @@ from astropy.io import fits
 # We need numpy for some arrays
 import numpy as np
 
-# Model name
-model_name = "psd"
+# Model name and energy band
+# Soft
+model_name = "PSDsoft"
+band = "0p3-0p7keV"
+# Hard
+#model_name = "PSDhard"
+#band = "0p7-1p5keV"
 
 # Path to files containing the "spectra"
 # Path for UOB computers
@@ -110,7 +115,7 @@ for i in range(n_rows):
 
 	# Figure out the filename
 	# Format is, e.g., psd-0p3-0p7keV-rtrc4-rsh3-dpar0p001-inc45-emss2.fits
-	cur_file = "psd-0p3-0p7keV-rtrc{:d}-rsh{:d}-dpar0p{:03d}-inc{:2d}-emss{:d}.fits" . format(int(par_values[0][index[0]]), int(par_values[1][index[1]]), int(1000.0*par_values[3][index[3]]), int(par_values[2][index[2]]), int(par_values[4][index[4]]))
+	cur_file = "psd-" + band + "-rtrc{:d}-rsh{:d}-dpar0p{:03d}-inc{:2d}-emss{:d}.fits" . format(int(par_values[0][index[0]]), int(par_values[1][index[1]]), int(1000.0*par_values[3][index[3]]), int(par_values[2][index[2]]), int(par_values[4][index[4]]))
 
 	print("File = %s" % cur_file)
 	# input("  ...pause...")
@@ -158,4 +163,4 @@ for i in range(n_rows):
 	tab.pushSpectrum(cur_spec)
 
 # save table model
-tab.write("psd.mod")
+tab.write(model_name + ".mod")
