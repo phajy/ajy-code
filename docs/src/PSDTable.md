@@ -18,7 +18,7 @@ See instructions on using a [propagating fluctuations model](https://heasarc.gsf
 
 As a test case let's use the power spectrum `xti3558010202_700-1500eV_ps_logrb.fits`.
 
-I've created a text file from this called `my_psd.csv` (you can find this file in the `test` folder) with the following columns.
+I've created a text file from this called `my_psd.csv` (you can find this file in the `files/psd` folder) with the following columns.
 
 f − df, f + df, 2Pdf, 2dPdf.
 
